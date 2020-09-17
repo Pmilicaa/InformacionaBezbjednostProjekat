@@ -2,6 +2,7 @@
 
 Napravljena je web aplikacija koja omogucava registraciju i prilikom registracije dodaje authority tipa regular.
 Napravila sam klasu securityConfiguration koja konfigurise koji tip authoritija smije da ode na neku stranicu.
+Pomocu Bcrypt enkodera svaka sifra prilikom registracije i prije upisa se hesira.
 Odobravanje novih naloga od strane admina takodje radi.
 Kreiranje jks datoteka prilikom registrovanja i onda se jsk i cer fajl skine u data.
 Omogucena je pretraga i to uz pomoc javascripta.

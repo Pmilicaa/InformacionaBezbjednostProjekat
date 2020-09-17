@@ -83,7 +83,7 @@ public class UserController {
 			
 			//Kreiranje sertifikata potpisanog od strane CA
 			startDate = iso8601Formater.parse("2017-03-31");
-			endDate = iso8601Formater.parse("2020-03-31");
+			endDate = iso8601Formater.parse("2021-03-31");
 			
 			KeyPair keyPair2 = cg.generateKeyPair();
 			
@@ -94,7 +94,7 @@ public class UserController {
 			KeyStoreWriter keyStoreWriter = new KeyStoreWriter();
 			KeyStore keyStore = keyStoreWriter.loadKeyStore(null, (email + "1").toCharArray());
 			keyStoreWriter.write(keyStore,email, keyPair2.getPrivate(), (email + "10").toCharArray(), cert);
-			keyStoreWriter.saveKeyStore(keyStore ,"C:\\Users\\Milica\\Desktop\\IB_Project_Shell\\data\\" + email + ".jks", (email + "10").toCharArray());
+			keyStoreWriter.saveKeyStore(keyStore ,"C:\\Users\\Milica\\Desktop\\ibproj\\IB_Project_Shell\\data\\" + email + ".jks", (email + "10").toCharArray());
 			
 			
 			System.out.println("ISSUER: " + cert.getIssuerX500Principal().getName());
@@ -137,8 +137,10 @@ public class UserController {
 				user.setCertificate("C:\\Users\\Milica\\Desktop\\IB_Project_Shell\\data\\" + user.getEmail() + ".cer");
 				
 				userRepository.save(user);
-				String idKorisnika = user.getId().toString(); 
-				kreiranjeDirektorijuma(idKorisnika);
+				/*
+				 * String idKorisnika = user.getId().toString();
+				 * kreiranjeDirektorijuma(idKorisnika);
+				 */
 				return new ResponseEntity("Uspjesna registracija", HttpStatus.OK);
 				
 			}

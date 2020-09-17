@@ -29,6 +29,7 @@ public class DemoApplication {
 		//create files folder in target/classes
 		try {
 			String path = DemoController.class.getProtectionDomain().getCodeSource().getLocation().getPath() + DATA_DIR_PATH;
+			
 			path = path.replaceAll("%20", " ");
 			FileUtils.forceMkdir(new File(path));
 			

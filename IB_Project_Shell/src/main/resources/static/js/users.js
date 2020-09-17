@@ -2,7 +2,7 @@
 	function fillTable(){
 		tableHeader();
 		$.ajax({
-			url:'http://localhost:8443/active',
+			url:'https://localhost:8443/active',
 			type: 'GET',
 			success:function(response){
 				if(response.length == 0){
@@ -31,7 +31,7 @@
 	function fillInactiveTable(){
 		tableInactiveHeader();
 		$.ajax({
-			url:'http://localhost:8443/inactive',
+			url:'https://localhost:8443/inactive',
 			type: 'GET',
 			crossDomain: true,
 			success:function(response){
@@ -86,7 +86,7 @@
 	function activateUser(id){
 		$.ajax({
 			type: 'POST',
-	        url: 'http://localhost:8443/activate/'+id,
+	        url: 'https://localhost:8443/activate/'+id,
 	        
 			success:function(response){
 				alert("User activated.");
@@ -102,15 +102,15 @@
 	
 	
 	$("#logoutButton").on('click', function(){
-		
-		window.location.replace("http://localhost:8443/login.html");
+		console.log("klikno");
+		window.location.replace("https://localhost:8443/login");
 
 	});
 	
 	function downloadCer(userName){
 		
 		var xhr = new XMLHttpRequest();
-		xhr.open('GET', "http://localhost:8443/api/demo/download/"+userName, true);
+		xhr.open('GET', "https://localhost:8443/api/demo/download/"+userName, true);
 		xhr.responseType = 'blob';
 	
 		xhr.onload = function(e) {

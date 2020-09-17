@@ -17,7 +17,7 @@ $(document).ready(function(){
 			
 			$.ajax({
 				type: 'POST',
-		        url: 'http://localhost:8443/login',
+		        url: 'https://localhost:8443/login',
 		       
 				success:function(response){
 					

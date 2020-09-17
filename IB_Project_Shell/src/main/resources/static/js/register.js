@@ -23,7 +23,7 @@ $(document).ready(function(){
 			      200: function (response) {
 			         $.ajax({
 						type: 'POST',
-						 url: 'http://localhost:8443/create/' + email +"/" +password,
+						 url: 'https://localhost:8443/create/' + email +"/" +password,
 							cache: false,
 						  success :function(answer) {
 							  alert("Imate certificate i jks");

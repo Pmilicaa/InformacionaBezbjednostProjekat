@@ -104,10 +104,14 @@ public class UserController {
 			System.out.println(cert);
 			System.out.println("-------------------------------------------------------");
 			
-			crlHolder = CRLManager.updateCRL(crlHolder, certCA, keyPairCA.getPrivate(), cert.getSerialNumber(), org.bouncycastle.asn1.x509.CRLReason.privilegeWithdrawn);
-			
-			X509CRL crl = CRLManager.CRLFromCrlHolder(crlHolder);
-			System.out.println(crl);
+			/*
+			 * crlHolder = CRLManager.updateCRL(crlHolder, certCA, keyPairCA.getPrivate(),
+			 * cert.getSerialNumber(),
+			 * org.bouncycastle.asn1.x509.CRLReason.privilegeWithdrawn);
+			 * 
+			 * X509CRL crl = CRLManager.CRLFromCrlHolder(crlHolder);
+			 * System.out.println(crl);
+			 */
 			
 			
 		}catch(Exception e) {

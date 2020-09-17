@@ -101,11 +101,6 @@
 	}
 	
 	
-	$("#logoutButton").on('click', function(){
-		console.log("klikno");
-		window.location.replace("https://localhost:8443/login");
-
-	});
 	
 	function downloadCer(userName){
 		

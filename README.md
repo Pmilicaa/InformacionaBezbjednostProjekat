@@ -14,6 +14,9 @@ Dodala sam novi jks i cer u data i stavila sam u application properties lokaciju
 
 Kao admin se ulogujete: micy_98@gmail.com i sifra: 1234
 Kao obican korisnik: joka@gmail.com i sifra: 1234
+
 MailClient nije povezan sa ovom web aplikacijom nego kad se skine .cer  treba da se rucno importuje u zeljeni .jks u Portecle-u.
+WriteMailClient-Unosi se prvo reciever,subject i body. Pravi se xml dokument, enkriptuje se uz pomoc javnog kljuca od korisnikaB, sacuva se u data kao poslataPoruka.xml, pretvara se u string i salje se. 
+ReadMailClient-Ucitava se dokument, dekriptuje i save-uje. 
 1234 - korisnikA
 korisnikB- 4321

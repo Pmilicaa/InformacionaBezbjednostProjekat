@@ -12,4 +12,8 @@ Konekcija sa bazom je dodata u application properties i koristi se MySql baza.
 Uspostavljena je komunikacija izmedju web app i https protokola.
 Dodala sam novi jks i cer u data i stavila sam u application properties lokaciju do tog jksa, sifru i keystore type.
 
+Kao admin se ulogujete: micy_98@gmail.com i sifra: 1234
+Kao obican korisnik: joka@gmail.com i sifra: 1234
 MailClient nije povezan sa ovom web aplikacijom nego kad se skine .cer  treba da se rucno importuje u zeljeni .jks u Portecle-u.
+1234 - korisnikA
+korisnikB- 4321
